@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 300ms;
+  background-color: black;
+}
+
+.body-black {
+  background-color: black;
+  transition: 300ms;
+}
+
+.container {
+  width: 80%;
+  max-height: 100vh;
+}
+
+.header {
+  height: 200px;
+  width: 100%;
+  justify-content: center;
+  display:flex;
+  align-items: center;
+}
+
+.header img {
+  height: 100px;
+  margin: 0 20px;
+  filter: rgba(255,105,180, 0.2) 0px 7px 29px 0px;
+}
+
+.head-wrapper {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heads {
+  display:none;
+  transition: ease-in-out 0.3s;
+}
+
+.button-container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-row {
+  display: flex;
+  max-height: 18%;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  min-height: 150px;
+  min-width: 150px;
+  margin: 5px;
+  border: 1px gray solid;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease-out;
+  box-shadow: rgba(255,105,180, 0.2) 0px 7px 29px 0px;
+  background-color: black;
+}
+
+.clicked {
+  background-color: white;
+  color: black;
+  animation: shake 0.3s ease;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button p {
+  color: white;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: 'VT323', monospace;
+  pointer-events: none;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
